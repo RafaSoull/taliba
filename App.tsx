@@ -1,31 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View,Image,Button, } from 'react-native';
+import { StatusBar } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import { Route } from './src/routes/index';
+import { useFonts } from 'expo-font';
+import { Inter_400Regular, Inter_500Medium, } from '@expo-google-fonts/inter';
+import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
+import { Background } from './src/components/Background';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Rajdhani_500Medium,
+    Rajdhani_700Bold,
+
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Talibán</Text>
-      <Image style={styles.logo} source={require('./assets/taliba-2.png')} />
-      <StatusBar style="auto" />
-      <Button title="Click Aqui" />
-    </View>
+    <Background>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Route />
+    </Background>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f7f7fa',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text:{
-    color: 'red',
-    fontSize: 40,
-  },
-  logo:{
-    width:200,
-    height:150,
-  }
-});
