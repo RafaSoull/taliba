@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { getBottomSpace } from 'react-native-iphone-x-helper'
-import { theme } from '../../global/styles/themes';
+import { themes } from '../../global/styles/themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,8 +7,8 @@ export const styles = StyleSheet.create({
   },
   label: {
     fontSize: 18,
-    fontFamily: theme.fonts.title700,
-    color: theme.colors.heading,
+    fontFamily: themes.fonts.title700,
+    color: themes.colors.heading,    
   },
   form: {
     paddingHorizontal: 24,
@@ -17,26 +16,26 @@ export const styles = StyleSheet.create({
   },
   select: {
     flexDirection: 'row',
-    width: '100%',
+    width: '100%', 
     height: 68,
-    borderColor: theme.colors.secondary50,
+    borderColor: themes.colors.secondary50,
     borderWidth: 1,
     borderRadius: 8,
-    alignItems: 'center',
+    alignItems: 'center',    
     paddingRight: 25,
-    overflow: 'hidden',
+    overflow: 'hidden',    
   },
   selectBody: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'center',    
   },
   image: {
     width: 64,
     height: 68,
-    backgroundColor: theme.colors.secondary40,
-    borderColor: theme.colors.secondary50,
+    backgroundColor: themes.colors.secondary40,
+    borderColor: themes.colors.secondary50,
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 8,    
   },
   field: {
     width: '100%',
@@ -51,16 +50,16 @@ export const styles = StyleSheet.create({
   divider: {
     marginRight: 4,
     fontSize: 15,
-    fontFamily: theme.fonts.text500,
-    color: theme.colors.highlight
+    fontFamily: themes.fonts.text500,
+    color: themes.colors.highlight 
   },
   caracteresLimit: {
-    fontFamily: theme.fonts.text400,
+    fontFamily: themes.fonts.text400,
     fontSize: 13,
-    color: theme.colors.highlight
+    color: themes.colors.highlight
   },
   footer: {
     marginVertical: 20,
     marginBottom: 56,
   }
-})
+});

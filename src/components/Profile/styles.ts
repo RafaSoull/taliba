@@ -1,27 +1,27 @@
-import { StyleSheet} from 'react-native'
-import {theme} from '../../global/styles/themes'
+import { StyleSheet } from 'react-native';
+import { themes } from '../../global/styles/themes';
 
 export const styles = StyleSheet.create({
-  container:{
+  container: {
+    flexDirection: 'row', 
+    alignItems: 'center'
+  },
+  user: {
     flexDirection: 'row',
-    alignItems: 'center',
   },
-  user:{
-    flexDirection: 'row',    
-  },
-  greeting:{
-    fontFamily: theme.fonts.title500,
+  greeting: {
+    fontFamily: themes.fonts.title500,
     fontSize: 24,
-    color: theme.colors.heading,
+    color: themes.colors.heading,
     marginRight: 6
   },
-  username:{
-    fontFamily: theme.fonts.title700,
+  username: {
+    fontFamily: themes.fonts.title700,
     fontSize: 24,
-    color: theme.colors.highlight
+    color: themes.colors.heading
   },
-  message:{
-    fontFamily: theme.fonts.text400,
-    color: theme.colors.highlight
+  message: {
+    fontFamily: themes.fonts.text400,
+    color: themes.colors.highlight
   }
-})
+});

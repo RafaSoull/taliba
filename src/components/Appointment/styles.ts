@@ -1,12 +1,11 @@
-import { StyleSheet } from 'react-native'
-import { theme } from '../../global/styles/themes'
+import { StyleSheet } from 'react-native';
+import { themes } from '../../global/styles/themes';
 
 export const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    alignItems: 'center',
-
+    alignSelf: 'center',
   },
   content: {
     flex: 1,
@@ -15,16 +14,16 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    marginBottom: 12
   },
   title: {
-    fontFamily: theme.fonts.title700,
-    color: theme.colors.heading,
+    fontFamily: themes.fonts.title700,
+    color: themes.colors.heading,
     fontSize: 18
   },
   category: {
-    fontFamily: theme.fonts.text400,
-    color: theme.colors.heading,
+    fontFamily: themes.fonts.text400,
+    color: themes.colors.highlight,
     fontSize: 13,
     marginRight: 24
   },
@@ -32,7 +31,6 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-
   },
   dateInfo: {
     flexDirection: 'row',
@@ -41,20 +39,25 @@ export const styles = StyleSheet.create({
   playersInfo: {
     flexDirection: 'row',
     alignItems: 'center',
-
   },
   date: {
-    fontFamily: theme.fonts.text500,
-    color: theme.colors.heading,
+    fontFamily: themes.fonts.text500,
+    color: themes.colors.heading,
     fontSize: 13,
     marginLeft: 7
   },
   player: {
-    fontFamily: theme.fonts.text500,
+    fontFamily: themes.fonts.text500,
     fontSize: 13,
     marginLeft: 7,
-    marginRight: 24,
+    marginRight: 24
+  },
+  guildIconContainer: {
+    height: 68,
+    width: 64,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 20
   }
-
-
-})
+});

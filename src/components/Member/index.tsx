@@ -1,42 +1,51 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+
+import {
+  View,
+  Text
+} from 'react-native';
 
 import { styles } from './styles';
+
 import { Avatar } from '../Avatar';
-import { theme } from '../../global/styles/themes';
+import { themes } from '../../global/styles/themes';
 
 export type MemberProps = {
   id: string;
   username: string;
   avatar_url: string;
   status: string;
-};
+}
 
 type Props = {
   data: MemberProps;
-};
+}
 
-export function Member({ data }: Props) {
-  const { on, primary } = theme.colors;
+export function Member({ data }: Props){
+  const { on, primary } = themes.colors;
   const isOnline = data.status === 'online';
 
   return (
     <View style={styles.container}>
       <Avatar urlImage={data.avatar_url} />
+
       <View>
-        <Text style={styles.title}>{data.username}</Text>
+        <Text style={styles.title}>
+          { data.username }
+        </Text>
 
         <View style={styles.status}>
-          <View
+          <View 
             style={[
               styles.bulletStatus,
               {
-                backgroundColor: isOnline ? on : primary,
-              },
+                backgroundColor: isOnline ? on : primary
+              }
             ]}
           />
+
           <Text style={styles.nameStatus}>
-            {isOnline ? 'Disponível' : 'Ocupado'}
+            { isOnline ? 'Disponível' : 'Ocupado' }
           </Text>
         </View>
       </View>

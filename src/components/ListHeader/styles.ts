@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native'
-import { theme } from '../../global/styles/themes'
+import { StyleSheet } from 'react-native';
+import { themes } from '../../global/styles/themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,16 +7,16 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 24,
+    marginTop: 27
   },
   title: {
-    fontFamily: theme.fonts.title700,
-    color: theme.colors.heading,
-    fontSize: 18
+    fontFamily: themes.fonts.title700,
+    color: themes.colors.heading,
+    fontSize: 18,
   },
   subtitle: {
-    fontFamily: theme.fonts.title700,
-    color: theme.colors.highlight,
-    fontSize: 13
-  },
-
-})
+    fontFamily: themes.fonts.text400,
+    color: themes.colors.highlight,
+    fontSize: 13,
+  }
+});

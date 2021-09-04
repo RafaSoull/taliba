@@ -1,11 +1,20 @@
-import React from "react";
-import { View, Text } from "react-native";
-import{styles } from './styles'
+import React from 'react';
 
-export function Load() {
-  return(
-   <View style={styles.container}>
-     <text>Load</text>
-   </View>
+import {
+  View,
+  ActivityIndicator
+} from 'react-native';
+
+import { styles } from './styles';
+import { themes } from '../../global/styles/themes';
+
+export function Load(){
+  return (
+    <View style={styles.container}>
+      <ActivityIndicator 
+        size="large"
+        color={themes.colors.primary}
+      />
+    </View>
   );
 }

@@ -1,4 +1,4 @@
-export const theme = {
+export const themes = {
   colors: {
     primary: '#E51C44',
     
@@ -10,12 +10,14 @@ export const theme = {
     secondary50: '#243189', 
     secondary40: '#1D2766', 
     secondary30: '#495BCC', 
+    secondary85: '#171F52',
    
     overlay: 'rgba(0,0,0,0.7)',
     highlight: '#ABB1CC',
     heading: '#DDE3F0',
     line: '#991F36',
     on: '#32BD50',
+    discord: '#7289da',
   },
 
   fonts: {

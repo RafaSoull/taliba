@@ -1,13 +1,15 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TouchableOpacityProps,
+import { 
+  TouchableOpacity, 
+  TouchableOpacityProps, 
+  Text, 
+  View 
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+
 import { styles } from './styles';
-import { theme } from '../../global/styles/themes';
+import { themes } from '../../global/styles/themes';
+
 import { GuildIcon } from '../GuildIcon';
 
 export type GuildProps = {
@@ -15,26 +17,38 @@ export type GuildProps = {
   name: string;
   icon: string | null;
   owner: boolean;
-};
+}
 
 type Props = TouchableOpacityProps & {
   data: GuildProps;
-};
+}
 
-export function Guild({ data, ...rest }: Props) {
+export function Guild({data, ...rest}: Props){
   return (
-    <TouchableOpacity style={styles.container} activeOpacity={0.7} {...rest}>
-      <GuildIcon guildId={data.id} iconId={data.icon} />
-      <View style={styles.content}>
-        <View>
-          <Text style={styles.title}>{data.name}</Text>
+    <TouchableOpacity
+      style={styles.container}
+      activeOpacity={0.7}
+      {...rest}
+    >
+        <GuildIcon guildId={data.id} iconId={data.icon} />
+
+        <View style={styles.content}>
+          <View>
+            <Text style={styles.title}>
+              {data.name}
+            </Text>
+
+            <Text style={styles.type}>
+              { data.owner ? 'Administrador' : 'Convidado'}
+            </Text>
+          </View>
         </View>
 
-        <Text style={styles.type}>
-          {data.owner ? 'Administrator' : 'Convidado'}
-        </Text>
-      </View>
-      <Text>Guild</Text>
+        <Feather 
+          name="chevron-right"
+          color={themes.colors.heading}
+          size={24}        
+        />
     </TouchableOpacity>
   );
 }

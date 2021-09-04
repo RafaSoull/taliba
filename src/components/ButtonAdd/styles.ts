@@ -1,17 +1,13 @@
-import { StyleSheet } from "react-native";
-import { theme } from "../../global/styles/themes";
+import { StyleSheet } from 'react-native';
+import { themes } from '../../global/styles/themes';
 
 export const styles = StyleSheet.create({
-  container:{
-    height:48,
-    width:48,
-    backgroundColor: theme.colors.primary,
+  container: {
+    height: 48,
+    width: 48,
+    backgroundColor: themes.colors.primary,
     borderRadius: 8,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
-  icon: {
-    color: theme.colors.heading,
-
-  }
-})
+});

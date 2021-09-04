@@ -1,21 +1,17 @@
-import { StyleSheet} from 'react-native'
-import {theme} from '../../global/styles/themes'
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container:{
-    width:48,
-    height:48,
+  container: {
+    width: 49,
+    height: 49,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 22,
+    marginRight: 22
   },
-  avatar:{
+  avatar: {
     width: 46,
     height: 46,
-    borderRadius:8,
-    
+    borderRadius: 8
   }
-  
-
-})
+});

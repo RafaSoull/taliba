@@ -1,11 +1,13 @@
-import React from "react";
-import { View, Text } from "react-native";
-import{styles } from './styles'
+import React from 'react';
+import { TextInput, TextInputProps } from 'react-native';
 
-export function TextArea() {
-  return(
-   <View style={styles.container}>
-     <text>TextArea</text>
-   </View>
+import { styles } from './styles';
+
+export function TextArea({...rest}: TextInputProps){
+  return (
+    <TextInput 
+      style={styles.container}
+      {...rest}
+    />
   );
 }
